@@ -7,7 +7,7 @@ os.environ["OPENAI_API_KEY"] = apikey
 openai.api_key = apikey
 from langchain.vectorstores import Chroma
 from langchain.embeddings.openai import OpenAIEmbeddings
-from prompts import QA_PROMPT
+from lit_chat.prompts import QA_PROMPT
 
 embedding = OpenAIEmbeddings()
 

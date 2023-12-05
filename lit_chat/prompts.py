@@ -11,9 +11,9 @@ QA_PROMPT = """Your goal is to find the answer to the following question using t
 
     You can follow the following format for your answer: \n
 
-    - First provide your answers here. answer: <your answer> \n
+    - First provide your answers here. answer: \n
 
-    - Second, provide parts of the texts used to generate the answers. literature evidence: 
+    - Second, provide parts of the texts used to generate the answers. literature evidence: ``evidence `` \n
 
     - Finally, provide the list of references used to answer from the text. Use APA citation style for referencing.
         Example: \n
