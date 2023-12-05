@@ -1,0 +1,31 @@
+{'Authors': 'Shenglai Zhonga, N aB ua, Rongfei Zhoua, Wanqin Jina, Miao Yub, Shiguang Lic', 'Year': '2016', 'Title': 'Aluminophosphate-17 and silicoaluminophosphate-17 membranes for CO2separations'}
+processing 1th file
+{'Authors': 'Zebao Rui, Joshua B. James, Alexandra Kasik, Y. S. Lin', 'Year': '2016', 'Title': 'AIChE Letter: Separations: Materials, Devices and Processes Metal-Organic Framework Membrane Process for High Purity CO 2Production'}
+processing 2th file
+{'Authors': 'Bin Wang, Na Hu, Huamei Wang, Yihong Zheng, Rongfei Zhou', 'Year': '2015', 'Title': 'Improved AlPO-18 membranes for light gas separations'}
+processing 3th file
+{'Authors': 'Can Zeng Lianga, Jiang Tao Liua, Juin-Yih Laib, Tai-Shung Chunga', 'Year': '2018', 'Title': 'High-performance multiple-layer PIM composite hollow ﬁber membranes for gas separation'}
+processing 4th file
+{'Authors': 'I.G.B.N. Makertihartha, Kevin S. Kencana, Theodorus R. Dwiputra, K. Khoiruddin, Rino R. Mukti, I.G. Wenten', 'Year': '2020', 'Title': 'Silica supported SAPO-34 membranes for CO2/N2 separation'}
+processing 5th file
+{'Authors': 'Panyuan Li, Zhi Wang, Yanni Liu, Song Zhao, Jixiao Wang, Shichang Wang', 'Year': '2014', 'Title': 'A synergistic strategy via the combination of multiple functional groups into membranes towards superior CO 2 separation performances'}
+processing 6th file
+{'Authors': 'Rachana Kumar, Chen Zhang, Arun K. Itta, Willam J. Koros', 'Year': '2019', 'Title': 'Highly permeable carbon molecular sieve membranes for e ﬃcient CO 2/N2 separation at ambient and subambient temperatures'}
+processing 7th file
+{'Authors': 'Wufeng Wu, Zhanjun Li, Yu Chen, Wanbin Li', 'Year': '2019', 'Title': 'Polydopamine-Modi ﬁed Metal −Organic Framework Membrane with Enhanced Selectivity for Carbon Capture'}
+processing 8th file
+{'Authors': 'Seungju Kim, Jue Hou, Yuqi Wang, Ranwen Ou, George Simon, Jong Geun Seong, Young Moo Lee, Huanting Wang', 'Year': '2018', 'Title': 'Highly permeable thermally rearranged polymer composite membranes with a graphene oxide scaffold for gas separation'}
+processing 9th file
+{'Authors': 'Zhihua Qiao, Song Zhao, Menglong Sheng, Jixiao Wang, Shichang Wang, Zhi Wang, Chongli Zhong, Michael D. Guiver', 'Year': '2019', 'Title': 'Metal-induced ordered microporous polymers for fabricating large-area gas separation membranes'}
+processing 10th file
+{'Authors': 'Yuan Jian, Huimin Yin, Fengyu Chang, Linjuan Cheng, Jianhua Yang, Wanjun Mu, Xingliang Li, Jinming Lu, Yan Zhang, Jinqu Wang', 'Year': '2017', 'Title': 'Facile synthesis of highly permeable CAU-1 tubular membranes for separation of CO 2/N2mixtures'}
+processing 11th file
+{'Authors': 'Jongmyeong Lee, Ju Sung Kim, Su-young Moon, Chae Young Park, Jeong F. Kim, Young Moo Lee', 'Year': '2020', 'Title': 'Dimensionally-controlled densification in crosslinked thermally rearranged (XTR) hollow fiber membranes for CO2 capture'}
+processing 12th file
+{'Authors': 'Seungju Kim, Sang Hoon Han, Young Moo Lee', 'Year': '2012', 'Title': 'Thermally rearranged (TR) polybenzoxazole hollow ﬁber membranes for CO2capture'}
+processing 13th file
+{'Authors': 'Ilya Borisova, Danila Bakhtina, Jose M. Luque-Alledb, Anastasiya Rybakovaa, Veronika Makarovaa, Andrew B. Fosterc, Wayne J. Harrisonc, Vladimir Volkova, Viktoria Polevayaa, Patricia Gorgojob, Eric Prestatd,e, Peter M. Buddc, Alexey Volkov', 'Year': 'Not provided', 'Title': 'Synergistic enhancement of gas selectivity in thin film composite membranes of PIM-1'}
+processing 14th file
+{'Authors': 'Taek-Joong Kim, Hele ´ne Vr ˚alstad, Marius Sandru, May-Britt H ¨agg', 'Year': '2012', 'Title': 'Separation performance of PVAm composite membrane for CO 2capture at various pH levels'}
+processing 15th file
+{'Authors': 'Zhihua Qiao, Zhi Wang, Chenxin Zhang, Shuangjie Yuan, Yaqun Zhu, Jixiao Wang, Shichang Wang', 'Year': '2013', 'Title': 'PVAm–PIP/PS Composite Membrane with High Performance for CO 2/N2Separation'}
