@@ -7,17 +7,19 @@ QA_PROMPT = """Your goal is to find the answer to the following question using t
 
     Also provide the text which was used to generate the answer. Add citations to each.\n
 
-    If you couldn't find an answer, reply with 'could not find an answer'
+    If you couldn't find an answer, reply with 'could not find an answer from the given literature'
 
     You can follow the following format for your answer: \n
 
-    - First provide your answers here. answer: \n
+    - First provide your answers. Answer must be as descriptive as possible. 
+     **Answer:** \n``your answer``\n 
 
-    - Second, provide parts of the texts used to generate the answers. literature evidence: ``evidence `` \n
+    - Second, provide parts of the texts used to generate the answers. 
+    **Literature excerpts:** \n``evidence `` \n
 
     - Finally, provide the list of references used to answer from the text. Use APA citation style for referencing.
         Example: \n
-        References: \n
+        **References:** \n
         1. reference 1 \n
         2. reference 2 \n    
     """

@@ -50,12 +50,13 @@ def ask_gpt_with_docs(question):
 
     prompt = QA_PROMPT.format(question, evidence)
 
-    messages = [{"role": "system", "content": "Hi, I am a chatbot. I will help you find answers to your questions based on literature."},
+    messages = [{"role": "system", "content": "Your goal is to find answers to asked questions based on literature."},
         {"role": "user", "content": prompt}]
     response = openai.ChatCompletion.create(
         model='gpt-4',
         messages=messages,
         temperature=0.1,
+        
         
     )
     answer = response.choices[0].message["content"]
