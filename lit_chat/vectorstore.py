@@ -115,6 +115,8 @@ def set_vectorstore(file_dir, chunk_size=1000, chunk_overlap=100):
             filename, chunk_size, chunk_overlap, meta_data=metadatas
         )
 
+        if 
+
         if i == 0:
             _create_vecdb(docs_split, persist_directory)
 
@@ -133,6 +135,10 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--chunk_overlap", type=int, default=100, help="chunk overlap for splitting"
+    )
+    
+    parser.add_argument(
+        "--create_new", type=bool, default=True, help="To create a new vectorstore from scratch. Set to False if you want to add more documents of existing vectorestore."
     )
 
     args = parser.parse_args()

@@ -11,7 +11,6 @@ from lit_chat.prompts import QA_PROMPT
 
 embedding = OpenAIEmbeddings()
 
-
 def get_docs(query, **kwargs):
     """gather evidence from a file for a given query"""
 
@@ -55,12 +54,8 @@ def ask_gpt_with_docs(question):
     response = openai.ChatCompletion.create(
         model='gpt-4',
         messages=messages,
-        temperature=0.1,
-        
-        
+        temperature=0.1,   
     )
     answer = response.choices[0].message["content"]
-    
-    print(answer)
 
     return answer

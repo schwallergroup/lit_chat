@@ -1,14 +1,14 @@
-from PIL import Image
-from dotenv import load_dotenv
-import pandas as pd
-import shutil
+#rom PIL import Image
+#from dotenv import load_dotenv
+#import pandas as pd
+#import shutil
 import openai
 import os
 import streamlit as st
-import sys
-import wandb
+#import sys
+#import wandb
 
-wandb.init(project="lit_chat")
+#wandb.init(project="lit_chat")
 
 ss = st.session_state
 
@@ -45,6 +45,7 @@ with st.sidebar:
 
 if api_key:
     from lit_chat.chat import ask_gpt_with_docs
+    #table = wandb.Table(columns=['Queries', 'Responses'])
 
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
@@ -67,11 +68,9 @@ if prompt:
     st.session_state.messages.append(query)
 
     ## TODO wandb does not log the query right now, wtf?
-    # wandb.log({'query':f'Question:{query}'}, commit=False)
 
     with st.chat_message("user"):
         st.write(prompt)
-        # queries.append(prompt)
 
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
@@ -81,5 +80,6 @@ if st.session_state.messages[-1]["role"] != "assistant":
 
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
-
-    # wandb.log({'lit_chat_response': message}, commit=False)
+    
+    #table.add_data(prompt, response)
+    #wandb.log({'Resuls_QA': table})
