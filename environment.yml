@@ -1,0 +1,15 @@
+name: litchat
+channels:
+  - defaults
+dependencies:
+  - python=3.10.9
+  - pip=22.3.1
+  - pip:
+    - streamlit==1.27.2
+    - chromadb==0.4.7
+    - openai==0.28.1
+    - wandb
+    - langchain==0.0.306
+    - pypdf 
+    - tiktoken
+    

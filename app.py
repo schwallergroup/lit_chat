@@ -6,9 +6,9 @@ import openai
 import os
 import streamlit as st
 #import sys
-#import wandb
+import wandb
 
-#wandb.init(project="lit_chat")
+wandb.init(project="lit_chat")
 
 ss = st.session_state
 
@@ -45,7 +45,7 @@ with st.sidebar:
 
 if api_key:
     from lit_chat.chat import ask_gpt_with_docs
-    #table = wandb.Table(columns=['Queries', 'Responses'])
+    table = wandb.Table(columns=['Queries', 'Responses'])
 
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
@@ -81,5 +81,5 @@ if st.session_state.messages[-1]["role"] != "assistant":
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
     
-    #table.add_data(prompt, response)
-    #wandb.log({'Resuls_QA': table})
+    table.add_data(prompt, response)
+    wandb.log({'Resuls_QA': table})

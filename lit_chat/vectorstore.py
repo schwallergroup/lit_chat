@@ -1,7 +1,7 @@
 import os
 import argparse
 import openai
-from prompts import META_PROMPT
+from lit_chat.prompts import META_PROMPT
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.chat_models import ChatOpenAI
 from langchain.vectorstores import Chroma
@@ -101,9 +101,10 @@ def _get_metadata(filename, llmchain):
     return metadata
 
 
-def set_vectorstore(file_dir, chunk_size=1000, chunk_overlap=100):
+def set_vectorstore(file_dir, **kwargs):
+    persist_directory = kwargs.get("persist_directory")
     llmchain = _set_metadata_llm()
-    persist_directory = "/home/wellawatte/Documents/lit_chat/lit_chat/vectorstore"
+
     for i, filename in enumerate(os.listdir(file_dir)):
         filename = os.path.join(file_dir, filename)
         print(f"processing {i}th file")
@@ -112,12 +113,13 @@ def set_vectorstore(file_dir, chunk_size=1000, chunk_overlap=100):
         print(metadatas)
 
         docs_split = _load_split_docs(
-            filename, chunk_size, chunk_overlap, meta_data=metadatas
+            filename,
+            kwargs.get("chunk_size"),
+            kwargs.get("chunk_overlap"),
+            meta_data=metadatas,
         )
 
-        if 
-
-        if i == 0:
+        if kwargs.get("create_new") is True or i == 0:
             _create_vecdb(docs_split, persist_directory)
 
         else:
@@ -136,21 +138,32 @@ if __name__ == "__main__":
     parser.add_argument(
         "--chunk_overlap", type=int, default=100, help="chunk overlap for splitting"
     )
-    
+
     parser.add_argument(
-        "--create_new", type=bool, default=True, help="To create a new vectorstore from scratch. Set to False if you want to add more documents of existing vectorestore."
+        "--create_new",
+        type=bool,
+        default=False,
+        help="To create a new vectorstore from scratch. Default set to False if you want to add more documents of existing vectorestore.",
+    )
+
+    parser.add_argument(
+        "--persist_dir",
+        type=str,
+        default="../vectorestore",
+        help="path to vectorestore.",
     )
 
     args = parser.parse_args()
-    file_dir = args.file_dir
-    chunk_size = args.chunk_size
-    chunk_overlap = args.chunk_overlap
-
-    print("arguments received", args)
 
     if args.openai_key:
         os.environ["OPENAI_API_KEY"] = args.openai_key
         openai.api_key = args.openai_key
         embedding = OpenAIEmbeddings()
 
-    set_vectorstore(file_dir, chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+    set_vectorstore(
+        args.file_dir,
+        chunk_size=args.chunk_size,
+        chunk_overlap=args.chunk_overlap,
+        persist_directory=args.persist_dir,
+        create_new=args.create_new,
+    )

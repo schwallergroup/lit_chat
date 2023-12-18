@@ -1,6 +1,0 @@
-streamlit
-ipython
-python-dotenv
-openai
-langchain
-pypdf

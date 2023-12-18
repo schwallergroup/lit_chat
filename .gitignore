@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Vectorestore
+lit_chat/vectorestore/
+lit_chat/__pycache__/ 
+wandb/
+
 # Distribution / packaging
 .Python
 build/
