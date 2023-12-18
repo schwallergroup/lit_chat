@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # Vectorestore
-lit_chat/vectorestore/
+lit_chat/vectorstore/
 lit_chat/__pycache__/ 
 wandb/
 
