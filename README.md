@@ -1,24 +1,28 @@
-# How to run LitChat QA locally
+# LitChat QA
 
- 1. ssh into the workstation using your workstation id.
- eg; ` yourname@liacpc1.epfl.ch`
+## Setup and Activation
 
- 2. Once you have logged into the workstation go to the `litchat_QA` directory, create a conda environment. DO THIS ONLY ONCE! From the litchat_QA directory run the command `conda env create  -f environment.yml`. Skip step 3 and do step 4 if you have setup an environment previously.
+ 1. SSH into the workstation using your workstation ID, for example: `yourname@liacpc1.epfl.ch`
 
- 4. Activate your conda environment: `conda activate litchat`. You run this command everytime you need to use the QA chatbot locally.
- 5. **IMPORTANT:** Update the correct path to the vectorstore in `chat.py` module. https://github.com/schwallergroup/lit_chat/blob/232b65adc68f7481d6e9f92e0fab488deb23319e/lit_chat/chat.py#L21
+ 2. Go to the `lit_chat` directory. If it's your first time, set up a conda environment. **This is a one-time setup**. From the `lit_chat` root directory, run: `conda env create  -f environment.yml`. If you have already set up the environment, skip to step 3.
 
- 6. Next run the command `streamlit run app.py`. This will provide you with a URL to open the streamlit interface.
+ 3.  Activate your conda environment. This step is required every time you use the QA chatbot locally: `conda activate litchat`
 
- 7. Copy paste the URL in your browser, add your openai API key and use the ChatBot!
+ 4.  **Important**: Ensure the path to the vectorstore in the `chat.py` module is correctly updated. Refer to this [line in the chat.py file](https://github.com/schwallergroup/lit_chat/blob/232b65adc68f7481d6e9f92e0fab488deb23319e/lit_chat/chat.py#L21) for guidance.
+
+ 5.  Start the LitChat QA interface by running: `streamlit run app.py` from the root directory. This command will generate a URL.
+
+ 6.  Copy and paste the provided URL into your browser, enter your OpenAI API key, and start using the chat!
+
+## Converting literature (PDFs) to a vectorestore
+To create or extend a vectorstore with your literature (list of PDF files), use the `vectorstore.py` module.
+
+- To extend an existing vectorstore, execute:
 
 
-# Converting literature (PDFs) to a vectorestore
-To create a new vectorstore with your own literature (list of PDF files) or extend the existing one with more literature you can run the `lit_chat/vectorstore.py` module locally. 
+  ```
+  python vectorstore --openai_key <your_key> --file_dir <path_to_pdfs> --persist_dir <path_to_vectorstore> --create_new False
+  ```
 
-To extend an existing vectorstore:
-
-    python vectorstore --openai_key <your_key> --file_dir <path_to_pdfs> --persist_dir <path_to_vectorstore> --create_new False
-
-Or else you can create a new vectorestore by setting `--create_new True`. See [vectorstore module](https://github.com/schwallergroup/lit_chat/blob/main/lit_chat/vectorstore.py)
+- To create a new vectorstore, set `--create_new` to `True`. More details can be found in the [vectorstore module documentation](https://github.com/schwallergroup/lit_chat/blob/main/lit_chat/vectorstore.py).
 
