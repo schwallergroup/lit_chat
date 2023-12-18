@@ -1,11 +1,5 @@
 import openai
 import os
-
-keys_file = open("/home/wellawatte/Desktop/key.txt")
-lines = keys_file.readlines()
-apikey = lines[0].rstrip()
-os.environ["OPENAI_API_KEY"] = apikey
-openai.api_key = apikey
 from langchain.vectorstores import Chroma
 from langchain.embeddings.openai import OpenAIEmbeddings
 from lit_chat.prompts import QA_PROMPT
